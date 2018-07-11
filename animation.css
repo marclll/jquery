@@ -1,0 +1,62 @@
+@keyframes rotationY{
+	from { transform:rotateY(0deg);}
+	to{transform:rotateY(360deg);}
+}
+
+@keyframes rotate{
+	0%,100%{
+		transform:translate(-300px,0px);
+	}
+	25% {
+		transform:translate(0px,300px);
+	}
+	50%{
+		transform:translate(300px,0px);
+	}
+	75%{
+		transform:translate(0px,-300px);
+	}
+}
+
+html,body{
+	width:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	display:flex;
+	align-items: center;
+	justify-content:space-around;
+}
+div{
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:150px;
+	height:150px;
+}
+
+#first{
+	animation-name: rotationY;
+	animation-duration: 2s;
+	animation-delay: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#second{background-color: #ff9900;}
+
+#third{
+	position: absolute;
+	background-color: #89f442;
+	animation-name: rotate;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#fourth{background-color: #3b2063;}
+
+#size{position: absolute; background-color: lightblue;}
